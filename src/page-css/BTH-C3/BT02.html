@@ -70,12 +70,16 @@
         }
 
         .holder select::picker(select) {
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid lightgray;
+            border:1px solid #ddd;
+            border-radius:8px;
+            margin-top:5px;
+            padding:5px;
+            transition: 0.2s;
         }
 
-        .holder select::picker-icon(select) {
+        .holder select option:hover, .holder select option:checked{
+            background:#0d6efd;
+            color:white;
         }
 
         .holder textarea {
