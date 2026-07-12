@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài số 2</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        table {
+            border-collapse: collapse;
+            box-shadow: 2px 2px 10px gray;
+        }
+
+        tr, td, th {
+            border: 1px solid white;
+            padding: 10px;
+            min-width: 400px;
+        }
+
+        .holder {
+            margin: 0 auto;
+            justify-self: center;
+            text-align: left;
+            box-shadow: 2px 2px 10px gray;
+            border-radius: 20px;
+            width: 40%;
+            min-height: 90vh;
+            margin-top: 40px;
+        }
+
+        .holder h1 {
+            text-align: center;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            color: rgb(44, 63, 81);
+            font-size: 30px;
+        }
+
+        .holder p {
+            margin-bottom: 5px;
+            padding-left: 40px;
+            font-weight: bold;
+            font-size: smaller;
+        }
+
+        .holder input, .holder select, .holder textarea {
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            margin-left: 40px;
+        }
+
+        .holder input {
+            width: calc(100% - 80px);
+            height: 35px;
+        }
+
+        .holder select, .holder ::picker(select) {
+            appearance: base-select;
+        }
+
+        .holder select {
+            align-items: center;
+            font-size: smaller;
+            width: calc(100% - 75px);
+            height: 40px;
+        }
+
+        .holder select::picker(select) {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid lightgray;
+        }
+
+        .holder select::picker-icon(select) {
+        }
+
+        .holder textarea {
+            width: calc(100% - 80px);
+            height: 70px;
+        }
+
+        .holder input[type=submit] {
+            margin-top: 20px;
+            width: calc(100% - 75px);
+            height: 50px;
+
+            background-color: rgb(53, 152, 218);
+            color: white;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; text-transform: uppercase;">Các sự kiện trong tháng 12/2025</h1>
+
+    <table align="center">
+        <tr style="background-color: blue; color: white; text-transform: uppercase;;">
+            <th>Sự kiện</th>
+            <th>Địa điểm</th>
+            <th>Thời gian</th>
+        </tr>
+        <tr style="background-color: rgb(242, 239, 239);">
+            <td>Hội thi tay nghề điêu khắc</td>
+            <td>Tây Ninh</td>
+            <td>Từ ngày 01-04 tháng 12/2025</td>
+        </tr>
+        <tr style="background-color: rgb(210, 211, 210);">
+            <td>Triển lãm tranh sơn mài</td>
+            <td>Bình Dương</td>
+            <td>Từ ngày 10-15 tháng 12/2025</td>
+        </tr>
+        <tr style="background-color: rgb(242, 239, 239);">
+            <td>Hội thi bánh dân gian Nam Bộ</td>
+            <td>Vĩnh Long</td>
+            <td>Từ ngày 15-20 tháng 12/2025</td>
+        </tr>
+        <tr style="background-color: rgb(210, 211, 210);">
+            <td>Hội thi văn nghệ quần chúng</td>
+            <td>Thành Phố Hồ Chí Minh</td>
+            <td>Từ ngày 25-30 tháng 12/2025</td>
+        </tr>
+    </table>
+
+    <div class="holder">
+        <h1>Đăng ký Tham gia Sự kiện</h1>
+        <form action="">
+            <p>Họ và Tên</p>
+            <input type="text" name="username" id="username">
+            <p>Email</p>
+            <input type="email" name="email" id="email">
+            <p>Số điện thoại</p>
+            <input type="number" name="phone" id="phone">
+            <p>Chọn sự kiện</p>
+            <select name="event" id="event">
+                <option value="">-- Chọn sự kiện --</option>
+                <option value="">Hội thi tay nghề điêu khắc</option>
+                <option value="">Triển lãm tranh sơn mài</option>
+                <option value="">Hội thi bánh dân gian Nam Bộ</option>
+                <option value="">Hội thi văn nghệ quần chúng</option>
+            </select>
+            <p>Ghi chú thêm</p>
+            <textarea name="note" id="note"></textarea>
+            <input type="submit" value="Đăng ký ngay">
+        </form>
+    </div>
+
+    <br><a href="../css.html">Về danh sách chương</a>
+</body>
+</html>
