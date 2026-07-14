@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài số 2</title>
+</head>
+<body>
+    <button id="start" onclick="start()">START</button>
+
+    <h1 id="result"></h1>
+    <script>
+        function start() {
+            let month = prompt("Nhập tháng:");
+            let year = prompt("Nhập năm:", 2000);
+            console.log(month, year);
+
+            function findDayInMonth(month, year) {
+                var flag = ((year % 4) == 0 && ((year % 100) != 0 || (year % 400) == 0));
+                return [31, (flag ? 29: 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month - 1];
+            }
+
+            let result = document.getElementById('result');
+            result.innerHTML = `Tháng ${month} năm ${year} có ${findDayInMonth(month, year)} ngày`
+        }
+    </script>
+
+    <br><a href="../javascript.html">Về danh sách chương</a>
+</body>
+</html>

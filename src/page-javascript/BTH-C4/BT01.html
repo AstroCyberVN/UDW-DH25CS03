@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài số 1</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table, tr, td {
+            border: 1px solid black;
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-transform: uppercase; text-align: center;">Bảng cửu chương</h1>
+
+    <table id="table" align="center"></table>
+    <script>
+        let table = document.getElementById("table");
+        html = "";
+
+        for (let i = 2; i <= 9; i++) {
+            if (i == 2 || i == 6) {
+                html += '<tr>';
+            }
+
+            html += "<td>";
+            for (let j = 1; j <= 9; j++) {
+                html += `${i} x ${j} = ${i*j} <br>`;
+            }
+            html += "</td>";
+
+            if (i == 5 || i == 9) {
+                html += '</tr>';
+            }
+        }
+
+        table.innerHTML += html;
+    </script>
+
+    <br><a href="../javascript.html">Về danh sách chương</a>
+</body>
+</html>
