@@ -6,6 +6,46 @@
     <title>Bài số 4</title>
 </head>
 <body>
+    <p>Nhập số phần tử: <input type="number" name="sophantu" id="sophantu"><br>
+        <button id="create" onclick="create()">Tạo mảng</button>
+        <button id="sortOne" onclick="sortOne()">Sắp xếp mảng tăng</button>
+        <button id="sortTwo" onclick="sortTwo()">Sắp xếp mảng giảm</button>
+    </p>
+
+    <p id="res"></p>
+    
+    <script>
+        let res = document.getElementById('res');
+        let arr = [];
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+        function create() {
+            const n = document.getElementById('sophantu').value;
+            arr = [];
+
+            for (let index = 0; index < n; index++) {
+                arr.push(getRandomInt(1, 50));
+            }
+
+            res.innerHTML = "";
+            res.innerHTML += `Mảng ban đầu: ${arr.join(", ")} <br>`;
+        }
+
+        function sortOne() {
+            arr.sort((a, b) => a - b);
+
+            res.innerHTML += `Mảng tăng dần: ${arr.join(", ")} <br>`;
+        }
+
+        function sortTwo() {
+            arr.sort((a, b) => b - a);
+
+            res.innerHTML += `Mảng giảm dần: ${arr.join(", ")} <br>`;
+        }
+    </script>
 
     <br><a href="../javascript.html">Về danh sách chương</a>
 </body>

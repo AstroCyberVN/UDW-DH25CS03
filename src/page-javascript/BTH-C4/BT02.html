@@ -6,9 +6,12 @@
     <title>Bài số 2</title>
 </head>
 <body>
-    <button id="start" onclick="start()">START</button>
-
     <h1 id="result"></h1>
+
+    <button id="start" onclick="start()">START</button>
+    <button id="clock" onclick="clock()">Xem ngày giờ</button>
+    <button id="reset" onclick="reset()">Reset</button>
+
     <script>
         function start() {
             let month = prompt("Nhập tháng:");
@@ -21,7 +24,18 @@
             }
 
             let result = document.getElementById('result');
-            result.innerHTML = `Tháng ${month} năm ${year} có ${findDayInMonth(month, year)} ngày`
+            result.innerHTML += `<br> Tháng ${month} năm ${year} có ${findDayInMonth(month, year)} ngày`
+        }
+
+        function clock() {
+            let result = document.getElementById('result');
+            let date = new Date();
+            result.innerHTML += `<br> Hôm nay, thứ ${date.getDay()} ngày ${date.toLocaleDateString('vi-VN')}`;
+            result.innerHTML += `<br> ${date.toLocaleTimeString('vi-VN')}`;
+        }
+
+        function reset() {
+            document.getElementById('result').innerHTML = "";
         }
     </script>
 

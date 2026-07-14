@@ -6,6 +6,51 @@
     <title>Bài số 3</title>
 </head>
 <body>
+    <h1>String Statistic</h1>
+
+    <p>
+        String:
+        <input type="text" name="str" id="statistic">
+        <button id="trackstats" onclick="trackStat()">Statistic</button>
+        <button id="reset" onclick="reset()">Reset</button>
+    </p>
+    <p id="result"></p>
+
+    <script>
+        function trackStat() {
+            let str = document.getElementById("statistic").value.toUpperCase();
+            let res = document.getElementById("result");
+
+            let temp = {
+                total: 0,
+                word: str.trim() === "" ? 0 : str.trim().split(/\s+/).length
+            };
+
+            for (const char of str) {
+                temp.total++;
+
+                if (!temp[char]) {
+                    temp[char] = 0;
+                }
+
+                temp[char]++;
+            }
+
+            res.innerHTML = "";
+            res.innerHTML += `Character(s): ${temp.total}<br>`;
+            res.innerHTML += `Word(s): ${temp.word}<br>`;
+
+            for (const key in temp) {
+                if (key === "total" || key === "word" || key === " ") continue;
+
+                res.innerHTML += `Character '${key}': ${temp[key]}<br>`;
+            }
+        }
+
+        function reset() {
+            document.getElementById('result').innerHTML = "";
+        }
+    </script>
 
     <br><a href="../javascript.html">Về danh sách chương</a>
 </body>
