@@ -4,9 +4,217 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài số 7</title>
+    <style>
+        * {
+            margin: 0 auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .title {
+            background-color: #323233;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav {
+            background-color: #444545;
+        }
+
+        nav .box {
+            width: fit-content;
+            display: flex;
+        }
+
+        nav .box .button, nav .box .dropdown-button {
+            margin-inline: 40px;
+            padding: 5px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: yellow;
+        }
+
+        nav a:hover {
+            color: red;
+        }
+
+        .content-container {
+            min-height: 50vh;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .content-container > * {
+            width: 300px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 10px lightgray;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .product h3 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            color: gray;
+        }
+
+        .product img {
+            border-radius: 20px;
+            /* box-shadow: 2px 2px 10px gray; */
+            width: 250px;
+            margin-top: 10px;
+        }
+
+        .product button {
+            font-size: 15px;
+            padding-inline: 20px;
+            padding-block: 10px;
+            border-radius: 7px;
+            border: #8bc3a0;
+            background-color: #28ac61;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .dropdown-button {
+            overflow: hidden;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            margin-top: 5px;
+            z-index: 1;
+            min-width: 150px;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: yellow;
+            padding: 6px 8px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            border: 1px dotted white;
+            background: linear-gradient(to right, black, white);
+        }
+
+        .dropdown-button:hover .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="title">
+        <h1>Shop Online</h1>
+        <p>Chào mừng bạn đến với cửa hàng trực tuyến của chúng tôi!</p>
+    </div>
+
+    <nav>
+        <div class="box">    
+            <div class="button"><a href="http://">Trang chủ</a></div>
+            <div class="dropdown-button">
+                <a href="http://">Sản phẩm</a>
+                <div class="dropdown-content"><a href="">Phụ kiện</a><a href="">Điện thoại</a><a href="">Laptop</a><a href="">Máy tính bảng</a></div>
+            </div>
+            <div class="button"><a href="http://">Khuyến mãi</a></div>
+            <div class="button"><a href="http://">Liên hệ</a></div>
+        </div>
+    </nav>
+
+    <div class="content-container">
+        <div class="product">
+            <img src="../../../assets/images/magsafe.jpg" alt="">
+            <h3>Sạc điện thoại không dây</h3>
+            <p>Giá: 250.000đ</p>
+            <button>Thêm vào giỏ</button>
+        </div>
+        <div class="product">
+            <img src="../../../assets/images/airpod.jpg" alt="">
+            <h3>Tai nghe Bluetooth</h3>
+            <p>Giá: 490.000đ</p>
+            <button>Thêm vào giỏ</button>
+        </div>
+        <div class="product">
+            <img src="../../../assets/images/balolaptop.jpg" alt="">
+            <h3>Balo Laptop</h3>
+            <p>Giá: 560.000đ</p>
+            <button>Thêm vào giỏ</button>
+        </div>
+        <div class="product">
+            <img src="../../../assets/images/airpod.jpg" alt="">
+            <h3>Tai nghe Bluetooth</h3>
+            <p>Giá: 490.000đ</p>
+            <button>Thêm vào giỏ</button>
+        </div>
+        <div class="product">
+            <img src="../../../assets/images/magsafe.jpg" alt="">
+            <h3>Sạc điện thoại không dây</h3>
+            <p>Giá: 250.000đ</p>
+            <button>Thêm vào giỏ</button>
+        </div>
+        <div class="product">
+            <img src="../../../assets/images/airpod.jpg" alt="">
+            <h3>Tai nghe Bluetooth</h3>
+            <p>Giá: 490.000đ</p>
+            <button>Thêm vào giỏ</button>
+        </div>
+        <div class="product">
+            <img src="../../../assets/images/balolaptop.jpg" alt="">
+            <h3>Balo Laptop</h3>
+            <p>Giá: 560.000đ</p>
+            <button>Thêm vào giỏ</button>
+        </div>
+        <div class="product">
+            <img src="../../../assets/images/magsafe.jpg" alt="">
+            <h3>Sạc điện thoại không dây</h3>
+            <p>Giá: 250.000đ</p>
+            <button>Thêm vào giỏ</button>
+        </div>
+        <div class="product">
+            <img src="../../../assets/images/airpod.jpg" alt="">
+            <h3>Tai nghe Bluetooth</h3>
+            <p>Giá: 490.000đ</p>
+            <button>Thêm vào giỏ</button>
+        </div>
+        <div class="product">
+            <img src="../../../assets/images/balolaptop.jpg" alt="">
+            <h3>Balo Laptop</h3>
+            <p>Giá: 560.000đ</p>
+            <button>Thêm vào giỏ</button>
+        </div>
+        <div class="product">
+            <img src="../../../assets/images/magsafe.jpg" alt="">
+            <h3>Sạc điện thoại không dây</h3>
+            <p>Giá: 250.000đ</p>
+            <button>Thêm vào giỏ</button>
+        </div>
+        <div class="product">
+            <img src="../../../assets/images/airpod.jpg" alt="">
+            <h3>Tai nghe Bluetooth</h3>
+            <p>Giá: 490.000đ</p>
+            <button>Thêm vào giỏ</button>
+        </div>
+        <div class="product">
+            <img src="../../../assets/images/balolaptop.jpg" alt="">
+            <h3>Balo Laptop</h3>
+            <p>Giá: 560.000đ</p>
+            <button>Thêm vào giỏ</button>
+        </div>
+        <div class="product">
+            <img src="../../../assets/images/balolaptop.jpg" alt="">
+            <h3>Balo Laptop</h3>
+            <p>Giá: 560.000đ</p>
+            <button>Thêm vào giỏ</button>
+        </div>
+    </div>
 
     <br><a href="../css.html">Về danh sách chương</a>
 </body>
