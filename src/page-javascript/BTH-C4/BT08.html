@@ -6,7 +6,29 @@
     <title>Bài số 8</title>
 </head>
 <body>
+    <h1 id="title"></h1>
 
-    <br><a href="../javascript.html">Về danh sách chương</a>
+    <p>Nhập nội dung: <input type="text" name="content" id="content" value="WELCOME HTML5!"></p>
+    <p>Màu nền: <input type="color" name="background" id="background" value="red"></p>
+    <p>Màu chữ: <input type="color" name="text" id="text" value="yellow"></p>
+
+    <button onclick="start()">Thực hiện</button>
+
+    <script>
+        function start() {
+            let title = document.getElementById('title');
+
+            const new_content = document.getElementById('content').value;
+            const new_background = document.getElementById('background').value;
+            const new_text = document.getElementById('text').value;
+
+            title.innerHTML = new_content;
+            title.style.backgroundColor = new_background;
+            title.style.color = new_text;
+        }
+        start();
+    </script>
+
+    <br><br><a href="../javascript.html">Về danh sách chương</a>
 </body>
 </html>

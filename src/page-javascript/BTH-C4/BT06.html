@@ -4,9 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài số 6</title>
+    <style>
+        * {
+            margin: 0 auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        table, tr, td, th {
+            border: 1px solid black;
+            width: 500px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <form action="" id="myForm">
+            <table>
+                <tr><th colspan="2" style="text-transform: uppercase; padding-bottom: 20px;">Các phép tính số học</th></tr>
+                <tr>
+                    <td>Số thứ 1: </td>
+                    <td><input type="number" name="num" id="numOne" value="5"></td>
+                </tr>
+                <tr>
+                    <td>Số thứ 2: </td>
+                    <td><input type="number" name="num" id="numTwo" value="4"></td>
+                </tr>
+                <tr>
+                    <td>Chọn phép toán</td>
+                    <td>
+                        <input type="radio" name="calculation" id="cal_plus" checked> Cộng <br>
+                        <input type="radio" name="calculation" id="cal_minus"> Trừ <br>
+                        <input type="radio" name="calculation" id="cal_multiply"> Nhân <br>
+                        <input type="radio" name="calculation" id="cal_divide"> Chia
+                    </td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Thực hiện</button></td>
+                    <td><p id="result"></p></td>
+                </tr>
+            </table>
+        </form>
+        <br><a href="../javascript.html">Về danh sách chương</a>
+    </div>
 
-    <br><a href="../javascript.html">Về danh sách chương</a>
+    <script>
+        let form = document.getElementById('myForm');
+        let result = document.getElementById('result');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const cal = document.querySelector("input[name='calculation']:checked");
+            let a = Number(document.getElementById('numOne').value);
+            let b = Number(document.getElementById('numTwo').value);
+
+            
+            if (cal.id.match('plus')) {
+                result.innerHTML = a+b;
+            } else if (cal.id.match('minus')) {
+                result.innerHTML = a-b;
+            } else if (cal.id.match('multiply')) {
+                result.innerHTML = a*b;
+            } else if (cal.id.match('divide')) {
+                result.innerHTML = a/b;
+            } else {
+                result.innerHTML = "Lỗi không tìm thấy phép tính";
+            }
+        })
+    </script>
 </body>
 </html>
