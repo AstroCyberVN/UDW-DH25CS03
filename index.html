@@ -1,30 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ỨNG DỤNG WEB</title>
+    <title>Ứng Dụng Web - Đặng Minh Nhật</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <div class="menu-bar">
-            <ul>
-                <li><h2><a href="./index.html">MAIN</a></h2></li>
-                <li><h2><a href="./src/sub-pages/home.html">HOME</a></h2></li>
-                <li><h2><a href="./src/sub-pages/about.html">ABOUT</a></h2></li>
-            </ul>
-        </div>
-    </nav>
 
-    <div class="book-list">
-        <h2>Đặng Minh Nhật - 2551010166</h2>
-        <ul>
-            <li><a href="./src/page-html/html.html">HTML</a> <img src="./assets/images/html.jpg""></li>
-            <li><a href="./src/page-css/css.html">CSS</a> <img src="./assets/images/css.jpg""></li>
-            <li><a href="./src/page-javascript/javascript.html">JAVASCRIPT</a> <img src="./assets/images/javascript.jpg""></li>
-            <li><a href="./src/page-jquery/jquery.html">JQUERY</a> <img src="./assets/images/jquery.jpg""></li>
-        </ul>
+    <!-- Japanese Sliding Door Overlay -->
+    <div class="shoji-overlay" id="shojiOverlay">
+        <div class="shoji-left"></div>
+        <div class="shoji-right"></div>
+        <div class="kanji-center">
+            <span class="kanji">歓</span>
+            <span class="kanji-sub">ようこそ</span>
+        </div>
     </div>
+
+    <!-- Main Container -->
+    <div class="main-wrapper">
+        
+        <!-- Top Bar - Torii Style -->
+        <header class="torii-header">
+            <div class="torii-beam"></div>
+            <nav class="nav-bar">
+                <a href="./index.html" class="nav-link active">
+                    <span class="nav-kanji">主</span>
+                    <span class="nav-text">MAIN</span>
+                </a>
+                <a href="./src/sub-pages/home.html" class="nav-link">
+                    <span class="nav-kanji">家</span>
+                    <span class="nav-text">HOME</span>
+                </a>
+                <a href="./src/sub-pages/about.html" class="nav-link">
+                    <span class="nav-kanji">介</span>
+                    <span class="nav-text">ABOUT</span>
+                </a>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="stamp-seal">北</div>
+                <h1 class="hero-title">Đặng Minh Nhật</h1>
+                <p class="hero-subtitle">2551010166 - Ứng Dụng Web</p>
+                <div class="hero-line"></div>
+            </div>
+        </section>
+
+        <!-- Cards Section - Shoji Panels -->
+        <section class="cards-section">
+            <div class="cards-grid">
+                
+                <!-- HTML Card -->
+                <a href="./src/page-html/html.html" class="shoji-card">
+                    <div class="card-frame">
+                        <div class="card-inner">
+                            <div class="card-icon">
+                                <img src="./assets/images/html.jpg" alt="HTML">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-kanji">HTML</span>
+                                <span class="card-label">Hypertext Markup</span>
+                            </div>
+                            <div class="card-corner tl"></div>
+                            <div class="card-corner tr"></div>
+                            <div class="card-corner bl"></div>
+                            <div class="card-corner br"></div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- CSS Card -->
+                <a href="./src/page-css/css.html" class="shoji-card">
+                    <div class="card-frame">
+                        <div class="card-inner">
+                            <div class="card-icon">
+                                <img src="./assets/images/css.jpg" alt="CSS">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-kanji">CSS</span>
+                                <span class="card-label">Cascading Style Sheets</span>
+                            </div>
+                            <div class="card-corner tl"></div>
+                            <div class="card-corner tr"></div>
+                            <div class="card-corner bl"></div>
+                            <div class="card-corner br"></div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- JavaScript Card -->
+                <a href="./src/page-javascript/javascript.html" class="shoji-card">
+                    <div class="card-frame">
+                        <div class="card-inner">
+                            <div class="card-icon">
+                                <img src="./assets/images/javascript.jpg" alt="JavaScript">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-kanji">JS</span>
+                                <span class="card-label">JavaScript</span>
+                            </div>
+                            <div class="card-corner tl"></div>
+                            <div class="card-corner tr"></div>
+                            <div class="card-corner bl"></div>
+                            <div class="card-corner br"></div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- jQuery Card -->
+                <a href="./src/page-jquery/jquery.html" class="shoji-card">
+                    <div class="card-frame">
+                        <div class="card-inner">
+                            <div class="card-icon">
+                                <img src="./assets/images/jquery.jpg" alt="jQuery">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-kanji">JQ</span>
+                                <span class="card-label">jQuery</span>
+                            </div>
+                            <div class="card-corner tl"></div>
+                            <div class="card-corner tr"></div>
+                            <div class="card-corner bl"></div>
+                            <div class="card-corner br"></div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="japanese-footer">
+            <div class="footer-pattern">
+                <span class="wave">〰</span>
+                <span class="wave">〰</span>
+                <span class="wave">〰</span>
+            </div>
+            <p class="footer-text">© 2026 - Đặng Minh Nhật</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Shoji door opening animation on load
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('shojiOverlay').classList.add('open');
+            }, 500);
+            
+            setTimeout(() => {
+                document.getElementById('shojiOverlay').style.display = 'none';
+            }, 1500);
+        });
+
+        // Card hover sound effect (visual feedback)
+        document.querySelectorAll('.shoji-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.querySelector('.card-inner').style.transform = 'scale(1.02)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.querySelector('.card-inner').style.transform = 'scale(1)';
+            });
+        });
+    </script>
+
 </body>
 </html>
